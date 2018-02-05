@@ -7,8 +7,8 @@ import { ContentfulService } from './contentful.service';
 import { ProductListComponent } from './product-list/product-list.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/products', pathMatch: 'full' },
-  { path: 'products',  component: ProductListComponent }
+  { path: '', component: AppComponent },
+  { path: 'products',  component: ProductListComponent },
 ];
 
 @NgModule({
@@ -21,7 +21,9 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  exports: [],
+  exports: [
+    RouterModule
+  ],
   providers: [
     ContentfulService
   ],
