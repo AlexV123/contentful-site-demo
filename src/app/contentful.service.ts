@@ -40,6 +40,6 @@ export class ContentfulService {
 
   getImage(query?: object) {
     return this.cdaClient.getAsset(CONFIG.contentTypeIds.image)
-      .then((asset) => `${asset.fields.file.url}?fm=jpg`);
+      .then((asset) => `${asset.fields.file.url}?fm=jpg&fl=progressive&fit=pad`);
   }
 }
