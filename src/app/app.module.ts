@@ -5,17 +5,20 @@ import { AppComponent } from './app.component';
 import { ContentfulService } from './contentful.service';
 // import new component
 import { ProductListComponent } from './product-list/product-list.component';
+import { EventListComponent } from './event-list/event-list.component';
 
 const routes: Routes = [
   { path: '', component: AppComponent },
   { path: 'products',  component: ProductListComponent },
+  { path: 'events',  component: EventListComponent },
 ];
 
 @NgModule({
   declarations: [
-    AppComponent,
     // add product component
-    ProductListComponent
+    ProductListComponent,
+    AppComponent,
+    EventListComponent,
   ],
   imports: [
     BrowserModule,
